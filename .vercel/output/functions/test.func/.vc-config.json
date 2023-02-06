@@ -1,5 +1,5 @@
 {
 	"runtime": "edge",
-	"envVarsInUse": [],
+	"envVarsInUse": ["VERCEL_REGION"],
 	"entrypoint": "index.js"
 }

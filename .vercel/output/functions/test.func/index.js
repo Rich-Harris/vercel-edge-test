@@ -1,3 +1,8 @@
 export default function handler(request) {
-	return new Response(`region: ${process.env.VERCEL_REGION}`);
+	return Response.json({
+		VERCEL_REGION: process.env.VERCEL_REGION,
+		['x-vercel-ip-country-region']: request.headers.get(
+			'x-vercel-ip-country-region'
+		)
+	});
 }
